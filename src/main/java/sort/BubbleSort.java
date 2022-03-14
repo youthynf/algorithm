@@ -1,4 +1,4 @@
-package sort;
+package main.java.sort;
 
 /**
  * @ClassName: BubbleSort
@@ -9,6 +9,6 @@ package sort;
  */
 public class BubbleSort {
     public static void main(String[] args) {
-        System.out.println("111");
+        System.out.println("BubbleSort");
     }
 }
