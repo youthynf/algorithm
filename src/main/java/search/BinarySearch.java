@@ -1,4 +1,4 @@
-package main.java.search;
+package search;
 
 /**
  * @ClassName: BinarySearch
