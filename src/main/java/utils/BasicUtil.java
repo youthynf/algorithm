@@ -37,4 +37,34 @@ public class BasicUtil {
         }
         return arr;
     }
+
+    /*
+     * 生成指定范围的随机数组
+     */
+    public static int[] generateRandomArray(int maxSize, int maxValue) {
+        // Math.random() -> [0,1) 所有小数，等概率返回一个
+        // Math.random() * N -> [0,N) 所有小数，等概率返回一个
+        // (int) (Math.random() * N) -> [0,N-1) 所有的整数，等概率返回一个
+        int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
+        }
+        return arr;
+    }
+
+    /*
+     * 复制数组
+     */
+    public static int[] copyArray(int[] arr) {
+        if (arr == null) {
+            return null;
+        }
+
+        int[] res = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            res[i] = arr[i];
+        }
+
+        return res;
+    }
 }
